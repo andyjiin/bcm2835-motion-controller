@@ -12,4 +12,13 @@ Status i2c_init(void) {
   return STATUS_OK;
 }
 
+Status i2c_read(const I2c *i2c, char *rx_buffer, size_t rx_len) {
+	bcm2835_i2c_setSlaveAddress(i2c->slave_address);
+    bcm2835_i2c_set_baudrate(i2c->speed);
+    bcm2835_i2c_end(); 
+	return STATUS_OK;
+}
 
+Status i2c_write(const I2c *i2c, char *tx_buffer, size_t tx_len) {
+	return STATUS_OK;
+}
