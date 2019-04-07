@@ -15,7 +15,7 @@ Status gpio_read(const Gpio *gpio, GpioState *state) {
 		return STATUS_INVALID_ARGS;
 	}
 
-	*state = bcm2835_gpio_lev(Gpio->pin);
+	*state = bcm2835_gpio_lev(gpio->pin);
 	return STATUS_OK;
 }
 
@@ -24,6 +24,6 @@ Status gpio_write(const Gpio *gpio, const GpioState state) {
 		return STATUS_INVALID_ARGS;
 	}
 
-	bcm2835_gpio_write(Gpio->pin, state);
+	bcm2835_gpio_write(gpio->pin, state);
 	return STATUS_OK;
 }
