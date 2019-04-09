@@ -1,8 +1,11 @@
 #include "../../hal/bcm2835.h"
 #include "../inc/gpio.h"
 
+#include <stdio.h>
+
 Status gpio_init(const Gpio *gpio) {
 	if (!gpio) {
+		printf("ERROR: Invalid arguments for gpio_init\n");
 		return STATUS_INVALID_ARGS;
 	}
 
