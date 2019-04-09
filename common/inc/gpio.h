@@ -28,7 +28,7 @@ typedef enum {
 typedef enum {
     GPIO_PIN_3 = RPI_GPIO_P1_03,
     GPIO_PIN_5 = RPI_GPIO_P1_05,
-    GPIO_PIN_7 = RPI_GPIO_P1_07
+    GPIO_PIN_7 = RPI_GPIO_P1_07,
     GPIO_PIN_8 = RPI_GPIO_P1_08,    // Pin P1-08, defaults to alt function 0 UART0_TXD
     GPIO_PIN_10 = RPI_GPIO_P1_10,   // Defaults to alt function 0 UART0_RXD
     GPIO_PIN_11 = RPI_GPIO_P1_11,
